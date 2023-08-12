@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/homeFragmentFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/image_face"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/face_good"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="소음 상태 : "
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="@+id/image_face"
+        app:layout_constraintTop_toBottomOf="@+id/image_face" />
+
+    <TextView
+        android:id="@+id/txt_noist_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="상태표시"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="@+id/status"
+        app:layout_constraintStart_toEndOf="@+id/status"
+        app:layout_constraintTop_toTopOf="@+id/status" />
+
+    <TextView
+        android:id="@+id/index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="소음 지수 : "
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/status"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
+
+    <TextView
+        android:id="@+id/txt_noise_index"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="현재 소음 지수"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/index"
+        app:layout_constraintTop_toTopOf="@+id/index" />
+
+    <TextView
+        android:id="@+id/timeSegment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="현재 시간대 : "
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/index"
+        app:layout_constraintTop_toBottomOf="@+id/index" />
+
+    <TextView
+        android:id="@+id/txt_time_segment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="시간대 표시"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/timeSegment"
+        app:layout_constraintTop_toTopOf="@+id/timeSegment" />
+
+    <TextView
+        android:id="@+id/txt_wanring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="주의 안내 문구"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/soundtype" />
+
+    <TextView
+        android:id="@+id/soundtype"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="14dp"
+        android:text="현재 소음 종류 : "
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/status"
+        app:layout_constraintTop_toBottomOf="@+id/timeSegment" />
+
+    <TextView
+        android:id="@+id/txt_soundType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:text="종류"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/soundtype"
+        app:layout_constraintTop_toTopOf="@+id/soundtype" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

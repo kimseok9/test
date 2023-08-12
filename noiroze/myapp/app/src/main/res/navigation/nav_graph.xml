@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.myapp.ui.home.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/decibelFragment"
+        android:name="com.example.myapp.ui.decibel.DecibelFragment"
+        android:label="fragment_decibel"
+        tools:layout="@layout/fragment_decibel" >
+        <action
+            android:id="@+id/action_decibelFragment_to_recordFileFragment"
+            app:destination="@id/recordFileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/communityFragment"
+        android:name="com.example.myapp.ui.community.CommunityListFragment"
+        android:label="fragment_community"
+        tools:layout="@layout/fragment_community_list" >
+        <action
+            android:id="@+id/action_communityFragment_to_boardDetailFragment"
+            app:destination="@id/boardDetailFragment" />
+        <action
+            android:id="@+id/action_communityFragment_to_boardCreateFragment"
+            app:destination="@id/boardCreateFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/othersFragment"
+        android:name="com.example.myapp.ui.others.OthersFragment"
+        android:label="fragment_others"
+        tools:layout="@layout/fragment_others" >
+        <action
+            android:id="@+id/action_othersFragment_to_noticeFragment"
+            app:destination="@id/noticeFragment" />
+        <action
+            android:id="@+id/action_othersFragment_to_complaintFragment"
+            app:destination="@id/complaintFragment" />
+        <action
+            android:id="@+id/action_othersFragment_to_complainListFragment"
+            app:destination="@id/complainListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boardDetailFragment"
+        android:name="com.example.myapp.ui.community.BoardDetailFragment"
+        android:label="fragment_board_detail"
+        tools:layout="@layout/fragment_board_detail" />
+    <fragment
+        android:id="@+id/boardCreateFragment"
+        android:name="com.example.myapp.ui.community.BoardCreateFragment"
+        android:label="fragment_board_create"
+        tools:layout="@layout/fragment_board_create" />
+    <fragment
+        android:id="@+id/complaintFragment"
+        android:name="com.example.myapp.ui.others.ComplaintCreateFragment"
+        android:label="fragment_complaint"
+        tools:layout="@layout/fragment_complaint_create" />
+    <fragment
+        android:id="@+id/noticeFragment"
+        android:name="com.example.myapp.ui.others.NoticeFragment"
+        android:label="fragment_notice"
+        tools:layout="@layout/fragment_notice" />
+    <fragment
+        android:id="@+id/complainListFragment"
+        android:name="com.example.myapp.ui.others.ComplainListFragment"
+        android:label="fragment_complain_detail"
+        tools:layout="@layout/fragment_complain_list" >
+        <action
+            android:id="@+id/action_complainListFragment_to_complainDetailFragment"
+            app:destination="@id/complainDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordFileFragment"
+        android:name="com.example.myapp.ui.decibel.RecordFileFragment"
+        android:label="fragment_record_file"
+        tools:layout="@layout/fragment_record_file" >
+        <action
+            android:id="@+id/action_recordFileFragment_to_recordDetailFragment"
+            app:destination="@id/recordDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/recordDetailFragment"
+        android:name="com.example.myapp.ui.decibel.RecordDetailFragment"
+        android:label="fragment_record_detail"
+        tools:layout="@layout/fragment_record_detail" />
+    <fragment
+        android:id="@+id/complainDetailFragment"
+        android:name="com.example.myapp.ui.others.ComplainDetailFragment"
+        android:label="fragment_complain_detail"
+        tools:layout="@layout/fragment_complain_detail" />
+</navigation>

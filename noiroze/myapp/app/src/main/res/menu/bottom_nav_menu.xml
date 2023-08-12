@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <!-- id가 목적지 ID -->
+        <item
+            android:id="@+id/homeFragment"
+            android:icon="@drawable/home"
+            android:title="Home" />
+
+        <item
+            android:id="@+id/decibelFragment"
+            android:icon="@drawable/decibel"
+            android:title="dB" />
+
+        <item
+            android:id="@+id/communityFragment"
+            android:icon="@drawable/white_board"
+            android:title="Community" />
+
+        <item
+            android:id="@+id/othersFragment"
+            android:icon="@drawable/others"
+            android:title="Others" />
+    </group>
+</menu>

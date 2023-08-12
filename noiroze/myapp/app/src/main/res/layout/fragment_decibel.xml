@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/decibelFragmentFrame"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.decibel.DecibelFragment">
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:text="데시벨(dBA)"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/dong_chart"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" >
+
+    </com.github.mikephil.charting.charts.BarChart>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:text="데시벨(dBA)"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/ho_Chart" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/ho_Chart"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dong_chart">
+
+    </com.github.mikephil.charting.charts.LineChart>
+
+    <TextView
+        android:id="@+id/btn_record_file"
+        android:layout_width="100dp"
+        android:layout_height="34dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/border_background"
+        android:gravity="center"
+        android:text="녹음파일 확인"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/txt_dong_02_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="-36dp"
+        android:text="02-06"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dong_chart" />
+
+    <TextView
+        android:id="@+id/txt_dong_06_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="06-10"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_dong_02_06"
+        app:layout_constraintTop_toTopOf="@+id/txt_dong_02_06" />
+
+    <TextView
+        android:id="@+id/txt_dong_10_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="10-14"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_dong_06_10"
+        app:layout_constraintTop_toTopOf="@+id/txt_dong_02_06" />
+
+    <TextView
+        android:id="@+id/txt_dong_14_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="14-18"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_dong_10_14"
+        app:layout_constraintTop_toTopOf="@+id/txt_dong_02_06" />
+
+    <TextView
+        android:id="@+id/txt_dong_18_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="18-22"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_dong_14_18"
+        app:layout_constraintTop_toTopOf="@+id/txt_dong_02_06" />
+
+
+    <TextView
+        android:id="@+id/txt_dong_22_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="22_02"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_dong_18_22"
+        app:layout_constraintTop_toTopOf="@+id/txt_dong_02_06" />
+
+    <TextView
+        android:id="@+id/txt_ho_02_06"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="45dp"
+        android:layout_marginTop="-30dp"
+        android:text="02-06"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ho_Chart" />
+
+    <TextView
+        android:id="@+id/txt_ho_06_10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="06-10"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_ho_02_06"
+        app:layout_constraintTop_toTopOf="@+id/txt_ho_02_06" />
+
+    <TextView
+        android:id="@+id/txt_ho_10_14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="10-14"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_ho_06_10"
+        app:layout_constraintTop_toTopOf="@+id/txt_ho_02_06" />
+
+    <TextView
+        android:id="@+id/txt_ho_14_18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="14-18"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_ho_10_14"
+        app:layout_constraintTop_toTopOf="@+id/txt_ho_02_06" />
+
+    <TextView
+        android:id="@+id/txt_ho_18_22"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="18-22"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_ho_14_18"
+        app:layout_constraintTop_toTopOf="@+id/txt_ho_02_06" />
+
+    <TextView
+        android:id="@+id/txt_ho_22_02"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:text="22-02"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/txt_ho_18_22"
+        app:layout_constraintTop_toTopOf="@+id/txt_ho_02_06" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-36dp"
+        android:layout_marginEnd="16dp"
+        android:text="시간"
+        android:textSize="8sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ho_Chart" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-40dp"
+        android:layout_marginEnd="12dp"
+        android:text="시간"
+        android:textSize="8sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dong_chart" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
