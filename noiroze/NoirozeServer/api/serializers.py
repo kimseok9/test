@@ -3,7 +3,8 @@ from django.contrib.auth import authenticate
 
 from rest_framework import serializers
 from common.models import CustomUser
-from main.models import Sound_Level, Sound_File, Sound_Level_Verified, CommunityBoard, ComplainBoard, Reply, NoticeBoard
+from main.models import Sound_Level, Sound_File, Sound_Level_Verified #, CommunityBoard, ComplainBoard, Reply, NoticeBoard
+from board.models import CommunityBoard, ComplainBoard, Reply, NoticeBoard
 from rest_framework.authtoken.models import Token
 
 class UserSerializer(serializers.ModelSerializer):

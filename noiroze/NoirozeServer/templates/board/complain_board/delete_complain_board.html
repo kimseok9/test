@@ -8,7 +8,7 @@
     {{ form.as_p }}
     <button type="button" onclick="deleteBoard()">삭제</button>
   </form>
-  <a href="{% url 'main:community_board_list' %}">취소</a>
+  <a href="{% url 'board:community_board_list' %}">취소</a>
 
   <script>
     function deleteBoard() {

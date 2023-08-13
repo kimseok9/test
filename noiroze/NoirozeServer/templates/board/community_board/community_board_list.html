@@ -31,7 +31,7 @@
                         {% for board in board_list %}
                             <tr>
                                 <td>{{ board.category }}</td>
-                                <td><a href="{% url 'main:community_board_detail' board.id %}">{{ board.title }}</a></td>
+                                <td><a href="{% url 'board:community_board_detail' board.id %}">{{ board.title }}</a></td>
                                 <td>{{ board.author }}</td>
                                 <td>{{ board.created_date }}</td>
                                 <td>{{ board.modify_date|default:"" }}</td>
@@ -128,7 +128,7 @@
             if (confirm("정말로 이 게시글을 삭제하시겠습니까?")) {
                 const form = document.createElement("form");
                 form.method = "POST";
-                form.action = "{% url 'main:delete_complain_board' 123 %}".replace("123", boardId);
+                form.action = "{% url 'board:delete_complain_board' 123 %}".replace("123", boardId);
 
                 const csrfInput = document.createElement("input");
                 csrfInput.type = "hidden";

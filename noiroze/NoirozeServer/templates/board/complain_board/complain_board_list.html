@@ -28,11 +28,11 @@
                         <tbody>
                             {% for board in board_list %}
                                 <tr>
-                                    <td><a href="{% url 'main:complain_board_detail' board.id %}">{{ board.title }}</a></td>
+                                    <td><a href="{% url 'board:complain_board_detail' board.id %}">{{ board.title }}</a></td>
                                     <td>{{ board.author }}</td>
                                     <td>{{ board.created_date }}</td>
                                     <td>
-                                        <!-- <a href="{% url 'main:update_complain_board' board.id %}" class="btn btn-primary smaller-button" onclick="updateBoard({{ board.id }})">수정</a> -->
+                                        <!-- <a href="{% url 'board:update_complain_board' board.id %}" class="btn btn-primary smaller-button" onclick="updateBoard({{ board.id }})">수정</a> -->
                                         <button type="button" class="btn btn-danger smaller-button" onclick="deleteBoard({{ board.id }})">삭제</button>
                                     </td>
                                 </tr>
@@ -43,7 +43,7 @@
                             {% endfor %}
                         </tbody>
                     </table>
-                    <!-- <a href="{% url 'main:create_complain_board' %}" class="btn btn-primary mb-3">게시글 작성</a> -->
+                    <!-- <a href="{% url 'board:create_complain_board' %}" class="btn btn-primary mb-3">게시글 작성</a> -->
                 </div>
 
                 <!-- 페이지네이션 -->

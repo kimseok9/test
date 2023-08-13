@@ -25,8 +25,8 @@
                                 {{ answer.create_date }}
                                 {% csrf_token %}
                             </div>
-                            <a href="{% url 'main:answer_update' answer.id %}" class="btn btn-sm btn-warning ml-2">수정</a>
-                            <form action="{% url 'main:answer_delete' board.id answer.id %}" method="post" class="d-inline">
+                            <a href="{% url 'board:answer_update' answer.id %}" class="btn btn-sm btn-warning ml-2">수정</a>
+                            <form action="{% url 'board:answer_delete' board.id answer.id %}" method="post" class="d-inline">
                                 {% csrf_token %}
                                 <button type="submit" class="btn btn-sm btn-danger ml-2">삭제</button>
                             </form>
@@ -34,7 +34,7 @@
                     </div>
                 </div>
                 {% endfor %}
-                <form action="{% url 'main:answer_create' board.id %}" method="post" class="my-3">
+                <form action="{% url 'board:answer_create' board.id %}" method="post" class="my-3">
                     {% csrf_token %}
                     <!-- 오류표시 Start -->
                     {% if form.errors %}
@@ -74,7 +74,7 @@
 
 <script>
     document.addEventListener('DOMContentLoaded', function () {
-        const form = document.querySelector('form[action="{% url "main:answer_create" board.id %}"]');
+        const form = document.querySelector('form[action="{% url "board:answer_create" board.id %}"]');
         const contentField = document.getElementById('content');
         const errorMsg = document.createElement('div');
         errorMsg.className = 'alert alert-danger mt-2 d-none';

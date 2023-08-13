@@ -5,7 +5,7 @@
         <div class="container-fluid px-4">
             <div class="container mt-5">
                 <h2 class="border-bottom py-2">답변 수정</h2>
-                <form action="{% url 'main:answer_update' answer_id %}" method="post" class="my-3">
+                <form action="{% url 'board:answer_update' answer_id %}" method="post" class="my-3">
                 {% csrf_token %}
                 {% if form.errors %}
                     <div class="alert alert-danger" role="alert">

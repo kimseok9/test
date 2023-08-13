@@ -85,25 +85,25 @@ function updateLoginStatus() {
 }
 function navigateToDashboard() {
     if (isAuthenticated()) {
-        window.location.href = "{% url 'main:dashboard' %}";
+        window.location.href = "{% url 'board:dashboard' %}";
     }
 }
 
 function navigateToDong() {
     if (isAuthenticated()) {
-        window.location.href = "{% url 'main:dong_101' %}";
+        window.location.href = "{% url 'board:dong_101' %}";
     }
 }
 
 function navigateToComplainBoardList() {
     if (isAuthenticated()) {
-        window.location.href = "{% url 'main:complain_board_list' %}";
+        window.location.href = "{% url 'board:complain_board_list' %}";
     }
 }
 
 function navigateToCommunityBoardList() {
     if (isAuthenticated()) {
-        window.location.href = "{% url 'main:community_board_list' %}";
+        window.location.href = "{% url 'board:community_board_list' %}";
     }
 }
 

@@ -13,7 +13,8 @@ from rest_framework.authentication import TokenAuthentication
 from .pagination import SetPagination
 
 from common.models import CustomUser, CustomUserManager
-from main.models import Sound_Level, Sound_File, Sound_Level_Verified, CommunityBoard, ComplainBoard
+from main.models import Sound_Level, Sound_File, Sound_Level_Verified #CommunityBoard, ComplainBoard
+from board.models import CommunityBoard, ComplainBoard
 from .serializers import *
 
 # 토큰 인증을 통해 로그인 한 유저의 정보를 가져오는 함수

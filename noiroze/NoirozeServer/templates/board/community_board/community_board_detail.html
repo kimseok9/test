@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 {% endfor %}
-                <form action="{% url 'main:answer_create' board.id %}" method="post" class="my-3">
+                <form action="{% url 'board:answer_create' board.id %}" method="post" class="my-3">
                     {% csrf_token %}
                     <!-- 오류표시 Start -->
                     {% if form.errors %}
